@@ -1,0 +1,22 @@
+[package]
+name = "subsurface-social-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.3.1"
+argon2 = "0.5.1"
+coi-actix-web = "0.7.1"
+postgres = "0.19.5"
+serde_json = "1.0.104"
+sha2 = "0.10.7"
+diesel = { version = "2.1.0", features = ["postgres", "uuid", "chrono", "postgres_backend"] }
+dotenvy = "0.15"
+uuid = "1.4.1"
+chrono = "0.4.26"
+
+[dependencies.serde]
+version = "1.0.104"
+features = ["serde_derive"]

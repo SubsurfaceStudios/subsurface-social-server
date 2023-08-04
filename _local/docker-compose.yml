@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: postgres-local
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+  adminer:
+    container_name: adminer-local
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 9000:8080
